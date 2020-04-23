@@ -1,5 +1,5 @@
 # MC Formatter
-<div class="border border-black-fade bg-blue-light p-2 mb-2">
+<div style="background-color:powderblue;>
 <img src="https://github.com/waihanko/UIPlayGround_EcommerceUI/blob/master/screenshots/Screenshot_2020-04-23-10-11-07-717_me.waihanko.uiplayground.jpg" alt="ScreenShot 1" width="250"/>
 
 <img src="https://github.com/waihanko/UIPlayGround_EcommerceUI/blob/master/screenshots/Screenshot_2020-04-23-10-11-10-623_me.waihanko.uiplayground.jpg" alt="ScreenShot 1" width="250"/> 
