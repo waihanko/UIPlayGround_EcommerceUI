@@ -1,4 +1,4 @@
-package me.waihanko.uiplayground;
+package me.waihanko.uiplayground.adapters;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

@@ -5,22 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        app:elevation="0dp"
-       >
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/white"
-            app:contentInsetStartWithNavigation="0dp"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-    </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_menu_navigation_24dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add_shopping_cart_black_24dp"
+                    />
+
+
+            </RelativeLayout>
+
 
 <androidx.appcompat.widget.AppCompatEditText
     android:layout_width="match_parent"
@@ -44,10 +59,10 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/green_600"
+        app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/green_600"
+        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextAppearance="@style/TextAppearance.Subhead.Bold"
         app:tabTextColor="@color/grey_60" />
 

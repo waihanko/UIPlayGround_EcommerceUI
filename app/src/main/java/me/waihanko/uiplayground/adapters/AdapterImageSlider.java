@@ -2,24 +2,20 @@ package me.waihanko.uiplayground.adapters;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import androidx.palette.graphics.Palette;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.List;
 
-import me.waihanko.uiplayground.Image;
+import me.waihanko.uiplayground.vo.Image;
 import me.waihanko.uiplayground.R;
-import me.waihanko.uiplayground.Tools;
+import me.waihanko.uiplayground.util.Tools;
 
 public class AdapterImageSlider extends PagerAdapter {
 
@@ -63,7 +59,7 @@ public class AdapterImageSlider extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((RelativeLayout) object);
+        return view == object;
     }
 
     @Override
@@ -71,7 +67,6 @@ public class AdapterImageSlider extends PagerAdapter {
         final Image imageList = items.get(position);
         LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.item_slider_image, container, false);
-
         productImage = v.findViewById(R.id.ivProductImage);
         mProductImageLayout = v.findViewById(R.id.rvProductImageLayout);
 

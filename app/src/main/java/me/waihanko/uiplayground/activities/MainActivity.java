@@ -1,4 +1,4 @@
-package me.waihanko.uiplayground;
+package me.waihanko.uiplayground.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
+import me.waihanko.uiplayground.R;
+import me.waihanko.uiplayground.util.Tools;
+import me.waihanko.uiplayground.adapters.SectionsPagerAdapter;
 import me.waihanko.uiplayground.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,17 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initToolbar();
         initComponent();
-    }
-
-    private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Filter Product");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Tools.setSystemBarColor(this, R.color.colorWhite);
-        Tools.setSystemBarLight(this);
     }
 
     private void initComponent() {

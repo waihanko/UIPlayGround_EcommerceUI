@@ -1,4 +1,4 @@
-package me.waihanko.uiplayground;
+package me.waihanko.uiplayground.vo;
 
 import android.graphics.drawable.Drawable;
 

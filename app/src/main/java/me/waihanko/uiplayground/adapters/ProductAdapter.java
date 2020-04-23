@@ -1,7 +1,6 @@
 package me.waihanko.uiplayground.adapters;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,14 +21,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.waihanko.uiplayground.ProductDetailActivity;
+import me.waihanko.uiplayground.activities.ProductDetailActivity;
 import me.waihanko.uiplayground.R;
-import me.waihanko.uiplayground.Tools;
+import me.waihanko.uiplayground.util.Tools;
 import me.waihanko.uiplayground.vo.ProductItems;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
     private List<ProductItems> itemList = new ArrayList<>();
-    private TextView name, description, price;
+    private TextView name, shopName, price;
     private ImageView mProductImage;
     private Button mAddToCard;
     private Context context;
@@ -48,9 +46,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         @SuppressLint("CutPasteId")
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.tv_productName);
-            description = itemView.findViewById(R.id.tv_productName);
-            price = itemView.findViewById(R.id.tv_productName);
+            name = itemView.findViewById(R.id.tv_ProductName);
+            shopName = itemView.findViewById(R.id.tv_ShopName);
+            price = itemView.findViewById(R.id.tv_Price);
             mAddToCard = itemView.findViewById(R.id.btnAddToCard);
             mProductItem = itemView.findViewById(R.id.cv_productItem);
             mProductImage = itemView.findViewById(R.id.iv_ProductImage);
@@ -71,7 +69,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     public void onBindViewHolder(@NonNull ProductAdapter.MyViewHolder holder, int position) {
         ProductItems item = itemList.get(position);
         name.setText(item.getName());
-        description.setText(item.getDescription());
+        shopName.setText(item.getShopName());
         price.setText(item.getPrice());
         Tools.displayImageOriginal(context, mProductImage, item.getImage());
         mBgCard.setBackgroundColor(bgColorList[position]);

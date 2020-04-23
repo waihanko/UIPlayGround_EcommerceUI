@@ -1,12 +1,12 @@
 package me.waihanko.uiplayground.vo;
 
 public class ProductItems {
-    String name,description,price;
+    String name, shopName,price;
     int image;
 
-    public ProductItems(String name, String description, String price, int image) {
+    public ProductItems(String name, String shopName, String price, int image) {
         this.name = name;
-        this.description = description;
+        this.shopName = shopName;
         this.price = price;
         this.image = image;
     }
@@ -23,8 +23,8 @@ public class ProductItems {
         return name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getShopName() {
+        return shopName;
     }
 
     public String getPrice() {
@@ -35,8 +35,8 @@ public class ProductItems {
         this.name = name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
     }
 
     public void setPrice(String price) {

@@ -65,14 +65,34 @@
         <item name="cornerRadius">50dp</item>
     </style>
 
+    <style name="FavouriteButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
     <style name="CustomShapeAppearance">
         <item name="cornerSizeBottomLeft">16dp</item>
     </style>
 
-    <style name="BagIt" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="DialogBagItButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="backgroundTint">@color/colorWhite</item>
         <item name="android:textColor">@color/grey_1000</item>
         <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="DetailBagItButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:padding">12dp</item>
+        <item name="iconTint">@color/colorWhite</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="rippleColor">@color/overlay_light_10</item>
+
     </style>
 
     <style name="ProductDetailCard">
